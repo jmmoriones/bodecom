@@ -1,0 +1,19 @@
+.hidden { display: none; }
+
+:root {
+  --t1: 1.999em;
+  --t2: 1.414em;
+  --s1: 0.707em;
+  --s2: 0.5em;
+}
+
+.container-default {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-bottom: 4em;
+}
+.active{right: 0;transition: .5s; }

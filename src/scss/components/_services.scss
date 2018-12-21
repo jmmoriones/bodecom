@@ -1,0 +1,87 @@
+.Services {
+  background-color: #24234e;
+  color: #FFF;
+  padding: 1em;
+  &-content {
+    flex: 1 0 30%;
+    margin-bottom: 2em;
+
+    @media screen and (max-width: 790px) {
+        flex: 1 0 50%;
+      }
+    @media screen and (max-width: 480px) {
+      flex: 1 0 100%;
+      font-size: 15px;
+    }
+    &__title {
+      color: #4CB8E9;
+      border: 0;
+      font-size: var(--t2);
+      background-color: transparent;
+      width: 100%;
+      text-align: left;
+      &::before {
+        content: url("./images/fonts/arrow-bottom.svg");
+        margin-right: .8em;
+        display: inline-block;
+        width: 20px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &:focus {
+        outline: transparent;
+      }
+    }
+    &__item {
+      list-style: none;
+      margin-left: 2.5em;
+    }
+
+    &__link {
+      display: flex;
+      font-size: 1em;
+      &::before {
+        content: "-";
+        margin-right: 3px;
+      }
+      &:hover {
+        color: #FFF;
+        text-decoration: none;
+        opacity: .7;
+      }
+    }
+  }
+
+  &-title {
+    text-align: center;
+    width: 100%;
+    font-weight: normal;
+    font-size: 2em;
+    padding: 1em 0;
+    text-transform: uppercase;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 550px) {
+      max-width: 90%;
+      flex-direction: column;
+    }
+  }
+}
+
+.arrow-bottom::before {
+  content: url("./images/fonts/arrow-bottom.svg");
+  width: 20px;
+}
+.arrow-rigth::before {
+  content: url("./images/fonts/arrow-rigth.svg");
+  width: 20px;
+}

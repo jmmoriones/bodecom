@@ -1,0 +1,109 @@
+.Footer {
+  background-image: url("./images/background-footer.png");
+
+  &-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 3em 0;
+
+    &__figure {
+      flex: 1 0 100%;
+      &-img {
+        width: 170px;
+      }
+      @media screen and (min-width: 980px) {
+        display: none; 
+      }
+    }
+    &__titleContent{
+      display: flex;
+      justify-content: center;
+      background-image: url(./images/logo.png);
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding: 1.3em 0;
+
+      &__title {
+        color: #FFF;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 1.5em;
+      }
+
+      @media screen and (max-width: 980px) {
+        background-image: none;
+        justify-content: flex-start;
+        padding: 0;
+        background-image: none;
+        padding-top: 0em;
+      }
+    }
+
+    @media screen and (max-width: 790px) {
+      padding: 1em 0;
+    }
+  }
+
+  &-information{
+    color: #FFF;
+    width: 80%;
+
+    @media screen and (max-width: 790px) {
+      flex-direction: column;
+      padding: 1em 0;
+      width: 90%;
+    }
+    &__house {
+      width: 50%;
+      &_text {
+        font-size: 1.12em;
+        margin-bottom: 15px;
+      }
+
+      @media screen and (max-width: 790px) {
+        margin-bottom:1em;
+      }
+    }
+    &__social-Nework {
+      width: 50%; 
+      &_text {
+        font-size: 1.12em;
+        margin-bottom: 7px;
+      }
+      &_link {
+        font-size: 1.12em;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__item {
+      @media screen and (max-width: 790px) {
+        width: 100%;
+      }
+    }
+  }
+  &-icon{
+    &__email::before {
+      font-family: 'icomoon' !important;
+      content: "\e903";
+      font-size: 30px;
+      margin-right: 12px;
+    }
+    &__facebook::before {
+      font-family: 'icomoon' !important;
+      content: "\e905";
+      font-size: 30px;
+      margin-right: 12px;
+    }
+  }
+
+  @media screen and (max-width: 790px) {
+    font-size: 14px;
+  }
+}

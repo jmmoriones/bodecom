@@ -1,0 +1,51 @@
+.Characteristic{
+  padding: 3em 0;
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
+    &__item {      
+      flex: 1 0 30%;
+      text-align: center;
+      margin-bottom: 3em;
+      color: #4fb8e9;
+      padding: 0 1em;
+
+      @media screen and (max-width: 790px) {
+        flex: 1 0 50%;
+      }
+
+      @media screen and (max-width: 480px) {
+        flex: 1 0 100%;
+      }
+    }
+
+    &__icon {
+      font-size: 4em;
+    }
+
+    &__title {
+      margin: .8em 0;
+      font-size: 1.4em;
+    }
+    &__description {
+      font-size: 1em;
+    }
+
+
+    @media screen and (max-width: 790px){
+      font-size: 15px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #4fb8e9;
+    margin: 1em 0;
+    font-weight: normal;
+  }
+}

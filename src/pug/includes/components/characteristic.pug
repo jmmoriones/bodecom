@@ -1,0 +1,9 @@
+mixin characteristic(caracteristicas)
+  section.Characteristic
+    h1.Characteristic__title caractetisticas
+    article.Characteristic-content
+      - for (let i = 0; i<caracteristicas.length; i++)
+        div.Characteristic-content__item
+          i.Characteristic-content__icon(class=`${caracteristicas[i].icon}`)
+          p.Characteristic-content__title= caracteristicas[i].title
+          p.Characteristic-content__description= caracteristicas[i].description

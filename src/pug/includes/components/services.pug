@@ -1,0 +1,7 @@
+mixin services(title, items)
+  article.Services-content
+    button(data-btn=`${title}`)#btnToggleService.Services-content__title= title
+    div(data-content=`${title}`)#blockListService.Services-content_lists
+      each item in items
+        li.Services-content__item
+          a(href="#").Services-content__link= item

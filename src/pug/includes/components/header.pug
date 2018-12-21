@@ -1,0 +1,11 @@
+mixin header(logo, menu)
+  header.Header
+    figure.Header__logo
+      img.Header__logo__img(src=`${logo}`, alt="logo bodecom")
+    div.Header-navmobile
+      button.Header-navmobile__btn#open-menu
+        img(src="./images/fonts/menu.svg")
+    ul.Header__navigation#menu
+      each item in menu
+        li.Header__navigation__item
+          a.Header__navigation__link(href=`/${item}`)= item

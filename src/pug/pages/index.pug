@@ -1,0 +1,44 @@
+extends ../includes/layout.pug
+include ../includes/components/header
+include ../includes/components/characteristic
+include ../includes/components/services
+include ../includes/components/team
+include ../includes/components/footer
+
+block metatags
+  -var title = "BODECOM | DATA SERVICE"
+  -var description = "Controla y administra toda la información de tu organización en solo lugar"
+  title= title
+  meta(name="description", content=description)
+  meta(name="application-name", content=title)
+block content
+  div.wrapper
+    +header("./images/logo.png", ["caracteristicas", "tutorial", "estructura", "contactos"])
+    +characteristic([{"icon": "icon-bd", "title": "Normalización Base de Datos", "description": "Proceso de ETL mediante el cual se analiza y normaliza la información contenida  en archivos."},{"icon": "icon-apoyo", "title": "Apoyo Logístico", "description": "Disposición de equipo técnico profesional capacitado y con kit de trabajo con metodológias ágiles"},{"icon": "icon-compute", "title": "software", "description": "Disposición de un sistema de información robusto y escalable personalizado acordea las necesidades del proyecto."},{"icon": "icon-eye", "title": "Soporte Técnico", "description": "Personal de seguimiento,  monitoreo, coordinación y control de la plataforma."},{"icon": "icon-secure", "title": "Seguridad y  optimización", "description": "Trasnferencia de información con protocolos de seguridad informática para la protección de los contenidos."},{"icon": "icon-time", "title": "Informes en Tiempo Real", "description": "Visualización de contenido,  fácil acceso desde cualquier dispositivo"}])
+    section.Services
+      div.Services-item
+        h1.Services-title servicios y tutoriales
+        +services("Participantes", ["Participante 1", "Participante 2", "Participante 3"])
+        +services("Gestión de Rutas", ["Gestor Ruta 1", "Gestor Ruta 2", "Gestor Ruta 3"])
+        +services("Parametrización", ["Registrar actividades", "Listar actividades de seguimiento", "Registrar participantes a las actividades", "Registrar estudios de suelos y datps de segmentación", "Lista de seguimiento y estudio de suelos"])
+        +services("Asignaciones", ["Individuales", "Organizacional", "Entrega Masiva"])
+        +services("Matriz 1 a 1", ["Registrar actividades", "Listar actividades de seguimiento", "Registrar participantes a las actividades", "Estudios de suelos y de datos de segmentación", "Lista de seguimiento y estudio de suelos"])
+        +services("Seguridad", ["Registrar actividades", "Listar actividades de seguimiento", "Registrar participantes a las actividades", "Estudios de suelos y de datos de segmentación", "Lista de seguimiento y estudio de suelos"])
+        +services("Bodega", ["Ingreso", "Ingresos Varios", "Ingresos Registrados", "Productos Adicionales", "Stock", "Stock Adicional", "Proveedores"])
+        +services("Matriz de comercialización", ["Matriz de comercializacion", "Registrar venta", "Registrar producto comercializado", "Registrar comprador", "Informes"])
+        +services("Generales", ["Busqueda", "Filtros", "Exportación de datos", "Correos", "Parametrización"])
+        +services("Actas", ["Individuales", "Organizacional", "Confirmar Acta"])
+        +services("Informes", ["Graficador de informes", "Matriz financiera", "Novedades de inventario"])
+        +services("Animales", ["Vaca", "Pollito", "Conejo"])
+    section.Team
+      div.Team-container
+        div.Team-header
+          h1.Team-header__title nuestro equipo de trabajo
+          p.Team-header__subtitle Grafico organizacional creado co una biblioteca de Diagrama
+        +team("Constanza Muñoz", "Dir. Administrativa", './images/team/constanza.png')
+        +team("Henry Romero", "Gerencia", "./images/team/henry.png")
+        +team("John Castro Lopez", "Desarrollador", "./images/team/john.png")
+        +team("Diego F. Mendoza", "Supervisión General", "./images/team/diego.png")
+        +team("Lilian Cifuentes", "Dirección Logistica", "./images/team/lilian.png")
+        +team("Rumel Correa", "Diseñador Gráfico", "./images/team/rumel.png")
+    +footer()

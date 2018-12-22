@@ -4,7 +4,6 @@ mixin header(logo, menu)
       img.Header__logo__img(src=`${logo}`, alt="logo bodecom")
     div.Header-navmobile
       button.Header-navmobile__btn#open-menu
-        img(src="./images/fonts/menu.svg")
     ul.Header__navigation#menu
       each item in menu
         li.Header__navigation__item

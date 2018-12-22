@@ -888,6 +888,9 @@ img {
           font-size: 1.2em; } }
     .Header__navigation__link {
       text-transform: uppercase; }
+      .Header__navigation__link:hover {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.7); }
     @media screen and (max-width: 790px) {
       .Header__navigation {
         position: fixed;
@@ -895,7 +898,7 @@ img {
         right: -1000px;
         height: 100vh;
         background: #4fb8e9;
-        width: 40%;
+        width: 60vw;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -905,7 +908,19 @@ img {
       display: none; } }
   .Header-navmobile__btn {
     border: 0;
-    background-color: transparent; }
+    background-color: transparent;
+    background: url("./images/fonts/menu.svg") center;
+    background-repeat: no-repeat;
+    padding: 1em;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer; }
+    .Header-navmobile__btn:focus {
+      outline: transparent; }
+  @media screen and (max-width: 790px) {
+    .Header {
+      padding: 1em;
+      font-size: 14px; } }
 
 .Characteristic {
   padding: 3em 0; }
